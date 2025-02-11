@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(ThreadSafeQueue)
+project(Multi-threaded_queue)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -9,7 +9,7 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
 # Define the queue library
-add_library(Queue Queue.h Queue.tpp)
+add_library(Queue Queue.h Queue.cpp)
 
 # Define the test executable
 add_executable(QueueTests TestQueue.cpp)
